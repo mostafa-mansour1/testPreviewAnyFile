@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { PreviewAnyFile } from '@ionic-native/preview-any-file/ngx';
+//import { PreviewAnyFile } from '@ionic-native/preview-any-file/ngx';
 import { IOSFilePicker } from '@ionic-native/file-picker/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { FileChooser } from '@ionic-native/file-chooser/ngx';
-
+declare var previewAnyFile;
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -13,13 +13,13 @@ export class HomePage {
   uri: any = "https://file-examples.com/wp-content/uploads/2017/10/file-example_PDF_1MB.pdf";
   constructor(
     private filePicker: IOSFilePicker,
-    private previewAnyFile: PreviewAnyFile,
+    //private previewAnyFile: PreviewAnyFile,
     private filePath: FilePath,
     private fileChooser: FileChooser
   ) { }
 
   onClick() {
-    this.previewAnyFile.preview(this.uri).then(uri => {
+    previewAnyFile.preview(this.uri).then(uri => {
       console.log('preview succ', uri)
 
     })
