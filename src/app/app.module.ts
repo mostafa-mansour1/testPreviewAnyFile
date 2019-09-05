@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PreviewAnyFile } from '@ionic-native/preview-any-file/ngx';
+// import { PreviewAnyFile } from '@ionic-native/preview-any-file/ngx';
 import { IOSFilePicker } from '@ionic-native/file-picker/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { FileChooser } from '@ionic-native/file-chooser/ngx';
@@ -21,7 +21,7 @@ import { FileChooser } from '@ionic-native/file-chooser/ngx';
   providers: [
     StatusBar,
     SplashScreen,
-    PreviewAnyFile,
+    // PreviewAnyFile,
     FilePath,
     IOSFilePicker,
     FileChooser
